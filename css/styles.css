@@ -20,34 +20,81 @@ body {
 .text {
     text-decoration: none;
 }
+
 /* точки убрать */
 .list {
     list-style: none;
 }
+/*глобальный сброс стилей по селектору тега для элементов*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    
+    /*outline: 1px solid red;*/
+
+}
+
 
 /*------------------HEADER---------------*/
-.header {
+.header { 
+    border-bottom: 1px solid #ececec;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
-    letter-spacing: 0.02em;
-    
-    
+    letter-spacing: 0.02em; 
 }
+.header .container {
+    display: flex;
+    align-items: center;
+}
+.header-flex {
+    display: flex;
+    align-items: center;
+}
+
 .header-nav-contact {
     color: var(--second-text-color);
 }
-.header-nav-contact:hover { 
-    color:var(--accent-color);
-}
+.header-nav-item:hover,
+.header-nav-item:focus,
+.header-nav-link:hover,
+.header-nav-link:focus,
+.header-nav-contact:hover,
 .header-nav-contact:focus {
     color: var(--accent-color);
 }
+.header-connect {
+    margin-left: auto;
+}
+.header-contact-item:not(:last-child) {
+    margin-right: 50px;
+}
 .header-nav-link {
     color: var(--accent-color);
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-right: 50px;
 }
 .header-nav-item {
 color: var(--first-text-color);
+display: block;
+padding-top: 32px;
+padding-bottom: 32px;
+margin-right: 50px;
 }
 
 .logo {
@@ -58,15 +105,22 @@ color: var(--first-text-color);
     letter-spacing: 0.03em;
     color: var(--accent-color);
 
+    align-items: center;
+    text-align: center;
 }
 .logo-black {
     color: #000000;
+    margin-right: 93px;
 }
-.logo-white {
-    color: var(--third-text-color);
-}
+
 /*---------------MAIN------------------*/
+
 .hero {
+    display: flex;
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    text-align: center;
     background-color: var(--background-color-hero);
 }
 
@@ -77,7 +131,13 @@ color: var(--first-text-color);
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;;
+    
     color: var(--third-text-color);
+    
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 696px;
 
 }
 
@@ -86,13 +146,20 @@ color: var(--first-text-color);
     font-size: 16px;
     line-height: 1.88;
     display: flex;
-    lign-items: center;
+    align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
     color: var(--third-text-color);
     background-color: var(--accent-color);
     cursor: pointer;
+
+    display: inline-block;
+    min-width: 200px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    padding: 10px 32px;
 }
+
 .hero-btn:hover {
     color: var(--accent-color);
     background-color: var(--background-color-general);
@@ -103,9 +170,19 @@ color: var(--first-text-color);
 }
 
 /*----------------основное--------------*/
-.basic-list {}
+.basic-list {
+    display: flex;
+}
 
-.basic-item {}
+.basic-item {
+    display: inline-block;
+    width: 270px;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.basic-item:not(:last-child) {
+    margin-right: 30px;
+}
 
 .basic-title {
     font-weight: 700;
@@ -114,6 +191,7 @@ color: var(--first-text-color);
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color:var(--first-text-color);
+    margin-bottom: 10px;
 }
 
 .basic-text {
@@ -132,53 +210,94 @@ color: var(--first-text-color);
     font-size: 36px;
     line-height: 42px;
     text-align: center;
-    etter-spacing: 0.03em;
+    letter-spacing: 0.03em;
     color: var(--first-text-color);
 }
 
-.Pictures-list {}
+.Pictures-list {
+    display: flex;
+    padding-top: 58px;
+    padding-bottom: 94px;
+}
 
-.Pictures-item {}
+.Pictures-item:not(:last-child) {
+    margin-right: 30px;
+}
 
 
 
 /*------------------наша команда----------------*/
-.team {}
+.team {
+    background-color: var(--background-color-team);
+}
 
 .team-title {
     font-weight: 700;
         font-size: 36px;
         line-height: 42px;
         text-align: center;
-        etter-spacing: 0.03em;
+        letter-spacing: 0.03em;
         color: var(--first-text-color);
+        padding-top: 105px;
 }
 
-.team-list {}
+.team-list {
+    display: flex;
+    width: 270px;
+    padding-top: 58px;
+    padding-bottom: 92px;
+}
 
-.team-item {}
+.team-item {
+    max-width: 270px;
+    max-height: 368px;
+    
+    background-color: var(--background-color-general);
+    box-shadow: 
+    0px 1px 3px rgba(0, 0, 0, 0.12), 
+    0px 1px 1px rgba(0, 0, 0, 0.14), 
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+.team-item:not(:last-child) {
+    margin-right: 30px;
+}
+
 
 .team-subtitle {
     font-weight: 500;
-        font-size: 16px;
-        line-height: 1.19;
-        text-align: center;
-        letter-spacing: 0.03em;
-        color:var(--first-text-color);
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color:var(--first-text-color);
+    
+    padding-top: 30px;
+    margin-bottom: 10px;
+
 }
 
 .team-text {
+    box-sizing: border-box;
+    padding-bottom: 30px;
+
     font-weight: 400;
-        font-size: 16px;
-        line-height: 1.19;
-        text-align: center;
-        letter-spacing: 0.03em;
-        color: var(--second-text-color);
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--second-text-color);
 }
 
 /*---------------FOOTER-------------*/
 .footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
     background-color: var(--background-color-hero);
+}
+.logo-white {
+    color: var(--third-text-color);
 }
 .footer-text {
     font-family: 'Roboto';
@@ -188,6 +307,9 @@ color: var(--first-text-color);
         line-height: 24px;    
         letter-spacing: 0.03em;
         color: var(--third-text-color);
+
+        display: inline-block;
+        margin-top: 20px;
 }
 .footer-contact {
     font-family: 'Roboto';
@@ -197,6 +319,11 @@ color: var(--first-text-color);
         line-height: 24px;
         letter-spacing: 0.03em;
         color: rgba(255, 255, 255, 0.6);
+
+        display: inline-block;
+}
+.footer-contact:not(:last-child) {
+    margin-top: 9px;
 }
 .footer-contact:hover {
     color: var(--accent-color);
@@ -207,16 +334,28 @@ color: var(--first-text-color);
 
 /*---------------------ПОРТФОЛИО----------------*/
 /*----------------------------------------------*/
-
+.portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 .portfolio-btn {
     font-family: "Roboto", sans-serif;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.63;
-        letter-spacing: 0.03em;
-        background-color: var(--background-color-team);
-        color: var(--first-text-color);
-        cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    letter-spacing: 0.03em;
+    background-color: var(--background-color-team);
+    color: var(--first-text-color);
+    cursor: pointer;
+
+    display: inline-block;
+    padding: 6px 22px;
+    min-width: 73px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+
+    
+    
 }
 .portfolio-btn:hover {
     background-color: var(--accent-color);
@@ -226,22 +365,48 @@ color: var(--first-text-color);
     background-color: var(--accent-color);
     color: var(--third-text-color);
 }
-.portfolio-list {}
+.portfolio-btn-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.portfolio-btn-item:not(:last-child) {
+    margin-right: 8px;
+}
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+}
 
-.portfolio-item {}
+.portfolio-item {
+    border: 1px solid #EEEEEE;
+    margin: 15px;
+    width: 370px;
+    flex-basis: calc(100% / 3 - 30px);
+}
 
 .portfolio-title {
     font-weight: 700;
-        font-size: 18px;
-        line-height: 2;
-        letter-spacing: 0.06em;
-        color: var(--first-text-color);
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--first-text-color);
+
+    margin-top: 20px;
+    margin-right: 24px;
+    margin-bottom: 4px;
+    margin-left: 24px;
+
 }
 
 .portfolio-text {
     font-weight: 400;
-        font-size: 16px;
-        line-height: 1.88;
-        letter-spacing: 0.03em;
-        color: var(--second-text-color);
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+    color: var(--second-text-color);
+    margin-left: 24px;
+    margin-bottom: 20px;
+    margin-right: 24px;
 }

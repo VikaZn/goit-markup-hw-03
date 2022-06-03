@@ -83,27 +83,32 @@ ul {
 
 .header-item {
     display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
     margin-right: 50px;
 
 }
 .header-nav-link {
     color: var(--accent-color);
-    
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 .header-nav-item {
 color: var(--first-text-color);
+padding-top: 32px;
+padding-bottom: 32px;
 
 }
 .header-contact-item {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    
 
 }
 
 .header-contact-item:not(:last-child) {
     margin-right: 50px;
+}
+.header-nav-contact {
+    color: var(--second-text-color);
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 .logo {
     font-family: 'Raleway'; 
@@ -173,11 +178,11 @@ color: var(--first-text-color);
 }
 
 .hero-btn:hover {
-    color: #2196F3;
+    color: #188ce8;
     background-color: var(--background-color-general);
 }
 .hero-btn:focus {
-    color: #2196F3;
+    color: #188ce8;
     background-color: var(--background-color-general);
 }
 
@@ -241,6 +246,11 @@ color: var(--first-text-color);
 .Pictures-item:not(:last-child) {
     margin-right: 30px;
 }
+.Pictures-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 
 
 
@@ -282,7 +292,9 @@ color: var(--first-text-color);
 .team-item:not(:last-child) {
     margin-right: 30px;
 }
-
+.team-img {
+    flex-basis: calc(100% / 4 - 30px);
+}
 
 .team-subtitle {
     font-weight: 500;
@@ -342,7 +354,7 @@ color: var(--first-text-color);
 
         display: inline-block;
 }
-.footer-contact {
+.footer-item {
     margin-top: 9px;
 }
 .footer-contact:hover {
@@ -350,6 +362,19 @@ color: var(--first-text-color);
 }
 .footer-contact:focus {
         color: var(--accent-color);
+}
+.logo-footer {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--accent-color);
+
+    align-items: center;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 20px;
 }
 
 /*---------------------ПОРТФОЛИО----------------*/
@@ -378,11 +403,11 @@ color: var(--first-text-color);
     
 }
 .portfolio-btn:hover {
-    background-color: var(--accent-color);
+    background-color: #188ce8;
     color: var(--third-text-color);
 }
 .portfolio-btn:focus {
-    background-color: var(--accent-color);
+    background-color: #188ce8;
     color: var(--third-text-color);
 }
 .portfolio-btn-list {
